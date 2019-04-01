@@ -1,0 +1,44 @@
+tosca_definitions_version: cloudify_dsl_1_3
+
+imports:
+  - http://cloudify.co/spec/cloudify/4.5.5/types.yaml
+  - http://www.getcloudify.org/spec/ansible-plugin/2.0.2/plugin.yaml
+
+inputs:
+
+  ip:
+    type: string
+    description: The VM IP.
+
+  username:
+    type: string
+    description: The VM SSH user.
+
+  private_key:
+    type: string
+    description: Full path to the VM's private key.
+
+node_types:
+
+  vm:
+    derived_from: cloudify.nodes.Compute
+    properties:
+      agent_config:
+        default:
+          install_method: none
+          key: { get_input: private_key }
+          user: { get_input: username }
+    interfaces:
+      cloudify.interfaces.lifecycle:
+        start:
+          implementation: ansible.cloudify_ansible.tasks.run
+          inputs:
+            site_yaml_path:
+              default: playbook.yaml
+
+node_templates:
+
+  vm:
+    type: vm
+    properties:
+      ip: { get_input: ip }

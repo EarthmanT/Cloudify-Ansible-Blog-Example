@@ -1,6 +1,6 @@
 ---
 - name: Install nginx
-  hosts: host.name.ip
+  hosts: all
   become: true
   tasks:
   - name: Add epel-release repo
@@ -13,7 +13,7 @@
       state: present
   - name: Insert Index Page
     template:
-      src: index.html
+      src: ./index.html
       dest: /usr/share/nginx/html/index.html
   - name: Start NGiNX
     service:
