@@ -1,4 +1,4 @@
-# Cloudify-Ansible-Blog-Example
+# ansible-example
 
 Cloudify solves the problem of integrating your multiple deployment vectors:
   - Infrastructure Management
