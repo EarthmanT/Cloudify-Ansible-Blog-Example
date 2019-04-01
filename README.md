@@ -13,9 +13,11 @@ We have a new Ansible plugin at Cloudify. This plugin enables users who provisio
 
 Let’s start off with a simple example, like Ansible’s “Writing Your First Playbook”. Below, we will take that playbook and put it into a Cloudify Blueprint and deploy it.
 
+You can download the code from this example [here](https://github.com/EarthmanT/ansible-example).
+
 ## Preliminary: Create a work directory:
 
-You will need a Cloudify Manager, as well as the IP, Username, and SSH key file to an existing VM to run this example.
+Note: You will need a Cloudify Manager, as well as the IP, Username, and SSH key file to an existing VM to run this example.
 
 ```python
 mkdir ansible-example
@@ -132,9 +134,9 @@ cfy install blueprint.yaml
 ```
 
 That was a pretty basic example, however we have other examples, such as:
-Kubernetes Blueprint, based on Kubespray (Ansible Kubernetes Playbook).
-DB-LB-App, a modular application utilizing Ansible Playbooks for MariaDB/Galera Cluster, HAProxy, and Drupal7.
-Testing Examples with Vagrantfile (OpenVPN, Clearwater, LAMP, etc).
+- [Kubernetes Blueprint](https://github.com/cloudify-community/blueprint-examples/tree/master/kubernetes), based on Kubespray (Ansible Kubernetes Playbook).
+- [DB-LB-App](https://github.com/cloudify-community/blueprint-examples/tree/master/db-lb-app), a modular application utilizing Ansible Playbooks for MariaDB/Galera Cluster, HAProxy, and Drupal7.
+- Testing Examples with Vagrantfile (OpenVPN, Clearwater, LAMP, etc).
 
 Explore those examples, and submit questions on our Google User Groups or Blueprint Examples Github Repo.
 
