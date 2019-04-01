@@ -138,5 +138,5 @@ That was a pretty basic example, however we have other examples, such as:
 - [DB-LB-App](https://github.com/cloudify-community/blueprint-examples/tree/master/db-lb-app), a modular application utilizing Ansible Playbooks for MariaDB/Galera Cluster, HAProxy, and Drupal7.
 - Testing Examples with Vagrantfile (OpenVPN, Clearwater, LAMP, etc).
 
-Explore those examples, and submit questions on our Google User Groups or Blueprint Examples Github Repo.
+Explore those examples, and submit questions on our [Google User Groups](https://groups.google.com/forum/#!forum/cloudify-users) or [Blueprint Examples Github Repo](https://github.com/cloudify-community/blueprint-examples).
 
